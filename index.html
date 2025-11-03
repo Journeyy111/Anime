@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anime is NOT for Kids</title>
+<style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial,sans-serif; }
+    body { background-color:#111; color:#f5f5f5; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; border-radius:8px; }
+
+    /* Header */
+    header { background-color:#e63946; color:white; padding:20px; text-align:center; font-size:2rem; font-weight:bold; position:sticky; top:0; z-index:100; }
+
+    /* Navigation */
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+    }
+    nav a, .dropbtn {
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: color 0.3s;
+        display: inline-block;
+    }
+    nav a:hover, .dropbtn:hover { color: #ffd166; }
+
+    /* Dropdown */
+    .dropdown { position: relative; display: inline-block; }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #222;
+        min-width: 150px;
+        border-radius: 5px;
+        overflow: hidden;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+    .dropdown-content a {
+        display: block;
+        color: white;
+        padding: 10px 15px;
+    }
+    .dropdown-content a:hover { background-color: #e63946; }
+    .dropdown:hover .dropdown-content { display: block; }
+
+    /* Hero */
+    .hero-mosaic { position:relative; height:80vh; display:flex; justify-content:center; align-items:center; overflow:hidden; background:linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)); }
+    .mosaic-grid { display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:repeat(2,1fr); gap:5px; width:90%; height:80%; position:absolute; top:10%; left:5%; opacity:0.9; filter:brightness(0.8); z-index:1; }
+    .mosaic-grid img { width:100%; height:100%; object-fit:cover; border-radius:5px; }
+    .hero-text { position:relative; text-align:center; z-index:2; color:white; }
+    .hero-text h1 { font-size:4rem; font-weight:bold; margin-bottom:20px; }
+    .hero-text p { font-size:1.5rem; }
+
+    .floating-square { position:absolute; width:20px; height:20px; background:rgba(255,255,255,0.2); border-radius:4px; animation: float 8s infinite alternate; z-index:0; }
+    @keyframes float { 0%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-30px) rotate(45deg);}100%{transform:translateY(0) rotate(0deg);} }
+
+    /* Sections */
+    section { padding:60px 20px; max-width:1000px; margin:auto; }
+    section h2 { font-size:2rem; color:#f4a261; margin-bottom:20px; }
+    section p { margin-bottom:20px; font-size:1.1rem; }
+
+    /* Cards */
+    .example { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .card { background-color:#222; padding:15px; border-radius:10px; width:300px; position:relative; overflow:hidden; cursor:pointer; transition:transform 0.3s; }
+    .card:hover { transform:scale(1.05); }
+    .caption { position:absolute; bottom:0; background:rgba(0,0,0,0.8); color:#fff; width:100%; padding:10px; font-size:0.9rem; transform:translateY(100%); transition:transform 0.3s; }
+    .card:hover .caption { transform:translateY(0); }
+
+    /* Footer */
+    footer { background-color:#1a1a1a; padding:20px; text-align:center; margin-top:50px; font-size:0.9rem; color:#888; }
+
+    /* Popup */
+    .popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:none; justify-content:center; align-items:center; z-index:200; }
+    .popup img { max-width:90%; max-height:80%; border-radius:10px; }
+    .popup span { position:absolute; top:20px; right:30px; font-size:2rem; cursor:pointer; color:#ffd166; }
+
+    @media(max-width:768px){ 
+        .hero-text h1{font-size:2.5rem;} 
+        .hero-text p{font-size:1rem;} 
+        .mosaic-grid{grid-template-columns:repeat(2,1fr); grid-template-rows:repeat(4,1fr); width:95%; top:5%; left:2.5%;} 
+        .card{width:90%;} 
+    }
+</style>
+</head>
+<body>
+
+<header>Anime is NOT for Kids</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <div class="dropdown">
+        <a href="genres.html" class="dropbtn">Genres ▼</a>
+        <div class="dropdown-content">
+            <a href="shonen.html">Shonen</a>
+            <a href="mystery.html">Mystery</a>
+            <a href="shoujo.html">Shoujo</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-mosaic">
+    <div class="floating-square" style="top:10%; left:5%;"></div>
+    <div class="floating-square" style="top:30%; left:80%;"></div>
+    <div class="floating-square" style="top:70%; left:20%;"></div>
+    <div class="floating-square" style="top:50%; left:60%;"></div>
+
+    <div class="mosaic-grid">
+        <img src="aot1.png" alt="Anime 1">
+        <img src="aot2.png" alt="Anime 2">
+        <img src="Ace 1.png" alt="Anime 3">
+        <img src="Ace 2.png" alt="Anime 4">
+        <img src="nono.png" alt="Anime 5">
+        <img src="shoujo.png" alt="Anime 6">
+        <img src="aoharuride.png" alt="Anime 7">
+        <img src="hug.png" alt="Anime 8">
+    </div>
+
+    <div class="hero-text">
+        <h1>Why is Anime Not for Kids?</h1>
+        <p>You think anime is all fun and games? Think AGAIN!</p>
+    </div>
+</section>
+
+<!-- Violent Themes -->
+<section id="violent">
+    <h2>Violent Themes in Anime</h2>
+    <p>Many popular shonen anime contain extreme violence and psychological trauma. Attack on Titan, for example, depicts Titans devouring humans and the horrors of war, which are far beyond what a child can process.</p>
+    <div class="example">
+        <div class="card" onclick="openPopup('aot1.png')">
+            <img src="aot1.png" alt="Attack on Titan Scene 1">
+            <div class="caption">Titans devouring humans — intense violence depicted.</div>
+        </div>
+        <div class="card" onclick="openPopup('aot2.png')">
+            <img src="aot2.png" alt="Attack on Titan Scene 2">
+            <div class="caption">Another scene showing brutality and psychological trauma.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Mystery / Emotional Themes -->
+<section id="mystery">
+    <h2>Mystery & Emotional Themes</h2>
+    <p>Even shonen shows can have tragic events and morally complex plots. Ace’s death in One Piece shows heartbreak and loss, while some stories explore dark secrets, corruption, and ethical dilemmas that children cannot fully grasp.</p>
+    <div class="example">
+        <div class="card" onclick="openPopup('Ace 1.png')">
+            <img src="Ace 1.png" alt="Ace Scene 1">
+            <div class="caption">Ace’s death — tragic and emotional scene.</div>
+        </div>
+        <div class="card" onclick="openPopup('Ace 2.png')">
+            <img src="Ace 2.png" alt="Ace Scene 2">
+            <div class="caption">The aftermath of Ace’s death — heartbreak.</div>
+        </div>
+        <div class="card" onclick="openPopup('nono.png')">
+            <img src="nono.png" alt="Dark Theme Scene">
+            <div class="caption">Explores darker themes like government secrecy and cruelty.</div>
+        </div>
+    </div>
+</section>
+
+<!-- Emotional Complexity -->
+<section id="emotional">
+    <h2>Emotional Complexity</h2>
+    <p>Shoujo anime often explores mature relationships, betrayal, heartbreak, and emotional growth — concepts that are difficult for children to fully understand.</p>
+    <div class="example">
+        <div class="card" onclick="openPopup('shoujo.png')">
+            <img src="shoujo.png" alt="Shoujo Scene 1">
+            <div class="caption">Heartbreak and emotional growth.</div>
+        </div>
+        <div class="card" onclick="openPopup('aoharuride.png')">
+            <img src="aoharuride.png" alt="Shoujo Scene 2">
+            <div class="caption">Mature emotional relationships.</div>
+        </div>
+        <div class="card" onclick="openPopup('hug.png')">
+            <img src="hug.png" alt="Shoujo Scene 3">
+            <div class="caption">Complex emotions depicted visually.</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    Images belong to their respective creators. Educational purpose only.
+</footer>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <span onclick="closePopup()">&times;</span>
+    <img id="popup-img" src="" alt="Popup Image">
+</div>
+
+<script>
+    function openPopup(src){
+        document.getElementById('popup-img').src = src;
+        document.getElementById('popup').style.display = 'flex';
+    }
+    function closePopup(){
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
